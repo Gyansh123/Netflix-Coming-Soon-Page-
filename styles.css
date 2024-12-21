@@ -1,0 +1,72 @@
+body {
+    background-color: #111111;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Remove default margin */
+    min-height: 100vh; /* Ensure the body always takes up at least the full viewport height */
+    height: 100%; /* Let the body take the full height of the window */
+}
+
+.whole {
+    margin-top: 0; /* Adjust as needed */
+}
+
+#netflix-img {
+    height: 130px;
+}
+
+.Box {
+    width: 550px;
+    max-width: 700px; /* Allow the box to shrink but not exceed 580px */
+    padding: 30px;
+    background-color: #222121;
+    text-align: center;
+    border-radius: 20px;
+    border: 2px solid hsl(0, 6%, 83%);
+    box-shadow: 0 0 10px rgba(0, 0, 0);
+
+    /* Ensure the box height adapts and doesn't overflow */
+    max-height: 90vh; /* Limit the max height to 90% of the viewport */
+    height: auto; /* Allow the height to grow as needed */
+    overflow: auto; /* Allow scrolling if the content exceeds the box height */
+}
+
+.greeting {
+    padding-top: 32px;
+    padding-bottom: 10px;
+}
+
+#input {
+    height: 35px;
+    width: 100%; /* Make the input width 100% of its container */
+    max-width: 516px; /* Limit the width to 516px */
+    margin-top: 27px;
+    background-color: #1a1a1a;
+    color: white;
+    border: 2px solid hsl(0, 6%, 83%);
+}
+
+#input::placeholder {
+    color: white;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .Box {
+        width: 90%; /* Make the box take up 90% of the width */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    #input {
+        width: 90%; /* Adjust the input to be 90% width */
+    }
+}
+
+@media (max-width: 400px) {
+    #input {
+        width: 80%; /* Further reduce input width for very small screens */
+    }
+}
